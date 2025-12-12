@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShopEase — Checkout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="logo">
+        <i class="fas fa-shopping-bag"></i>
+        ShopEase
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="product.html"><i class="fas fa-box"></i> Products</a></li>
+          <li>
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i> Cart
+              <span class="cart-badge" id="cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="checkout.html" class="active"><i class="fas fa-credit-card"></i> Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container checkout-page">
+    <h1><i class="fas fa-credit-card"></i> Checkout</h1>
+
+    <div class="checkout-layout">
+      <div class="checkout-form-section">
+        <form id="checkout-form" novalidate>
+          <fieldset>
+            <legend><i class="fas fa-shipping-fast"></i> Shipping Information</legend>
+
+            <div class="form-group">
+              <label for="fullname">Full name *</label>
+              <input id="fullname" name="fullname" type="text" required placeholder="Juan Dela Cruz" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="juan@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone number *</label>
+              <input id="phone" name="phone" type="tel" required placeholder="09XX XXX XXXX" />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address *</label>
+              <input id="address" name="address" type="text" required placeholder="Street address" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input id="city" name="city" type="text" required placeholder="Quezon City" />
+              </div>
+
+              <div class="form-group">
+                <label for="postal">Postal code *</label>
+                <input id="postal" name="postal" type="text" required placeholder="1100" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><i class="fas fa-credit-card"></i> Payment Information</legend>
+            
+            <div class="form-group">
+              <label for="card">Card number *</label>
+              <input id="card" name="card" type="text" inputmode="numeric" required placeholder="1234 5678 9012 3456" maxlength="19" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiry">Expiry (MM/YY) *</label>
+                <input id="expiry" name="expiry" type="text" required placeholder="12/25" maxlength="5" />
+              </div>
+
+              <div class="form-group">
+                <label for="cvc">CVC *</label>
+                <input id="cvc" name="cvc" type="text" inputmode="numeric" required placeholder="123" maxlength="4" />
+              </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" name="save-info" id="save-info" />
+                <span>Save my information for faster checkout next time</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary btn-large">
+              <i class="fas fa-lock"></i> Place Order
+            </button>
+            <button type="reset" class="btn secondary">
+              <i class="fas fa-redo"></i> Reset
+            </button>
+          </div>
+
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <aside class="checkout-summary">
+        <h2>Order Summary</h2>
+        <div id="checkout-items">
+          <!-- Cart items will be displayed here -->
+        </div>
+        
+        <hr>
+        
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="checkout-subtotal">₱0</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping:</span>
+          <span id="checkout-shipping">₱0</span>
+        </div>
+        <hr>
+        <div class="summary-row summary-total">
+          <strong>Total:</strong>
+          <strong id="checkout-total">₱0</strong>
+        </div>
+
+        <div class="secure-checkout">
+          <i class="fas fa-shield-alt"></i>
+          <span>Secure 256-bit SSL encrypted checkout</span>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> ShopEase — Built with accessibility in mind.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShopEase — Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="logo">
+        <i class="fas fa-shopping-bag"></i>
+        ShopEase
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="product.html"><i class="fas fa-box"></i> Products</a></li>
+          <li>
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i> Cart
+              <span class="cart-badge" id="cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="checkout.html"><i class="fas fa-credit-card"></i> Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Find the perfect gadget.</h1>
+          <p>Simple, reliable products for everyday life — curated for quality and value.</p>
+          <a class="btn primary" href="#products">
+            <i class="fas fa-arrow-down"></i>
+            Shop Now
+          </a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop" alt="Premium wireless headphones on wooden surface" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container features">
+      <h2>Why Choose ShopEase?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+          <h3>Free Shipping</h3>
+          <p>On orders over ₱2,000 within Metro Manila</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Secure Payments</h3>
+          <p>PCI-compliant payment processing partners</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Support</h3>
+          <p>We respond to all inquiries within 24 hours</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="container products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        
+        <article class="product-card">
+          <img class="product-image" src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=300&fit=crop" alt="Smart wireless earbuds with charging case" />
+          <div class="product-body">
+            <h3>Smart Earbuds</h3>
+            <p class="product-price">₱1,499</p>
+            <p class="product-description">Wireless earbuds with active noise cancellation and 8-hour battery life.</p>
+            <div class="product-actions">
+              <a class="btn secondary" href="product.html?id=1">
+                <i class="fas fa-eye"></i> View
+              </a>
+              <button class="btn primary add-to-cart" data-id="1" data-name="Smart Earbuds" data-price="1499">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img class="product-image" src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=300&fit=crop" alt="Portable Bluetooth speaker in black" />
+          <div class="product-body">
+            <h3>Portable Speaker</h3>
+            <p class="product-price">₱2,300</p>
+            <p class="product-description">Bluetooth speaker with 12-hour battery and waterproof design.</p>
+            <div class="product-actions">
+              <a class="btn secondary" href="product.html?id=2">
+                <i class="fas fa-eye"></i> View
+              </a>
+              <button class="btn primary add-to-cart" data-id="2" data-name="Portable Speaker" data-price="2300">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img class="product-image" src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400&h=300&fit=crop" alt="Fitness smartwatch with heart rate monitor" />
+          <div class="product-body">
+            <h3>Fitness Watch</h3>
+            <p class="product-price">₱3,800</p>
+            <p class="product-description">Track your heart rate, steps, and sleep with advanced sensors.</p>
+            <div class="product-actions">
+              <a class="btn secondary" href="product.html?id=3">
+                <i class="fas fa-eye"></i> View
+              </a>
+              <button class="btn primary add-to-cart" data-id="3" data-name="Fitness Watch" data-price="3800">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-undo-alt"></i></div>
+            <h4>30-Day Returns</h4>
+            <p>Easy returns and exchanges within 30 days</p>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-award"></i></div>
+            <h4>Quality Guaranteed</h4>
+            <p>All products come with manufacturer warranty</p>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-star"></i></div>
+            <h4>Top Rated</h4>
+            <p>4.8/5 average customer satisfaction rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> ShopEase — Built with accessibility in mind.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

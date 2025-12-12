@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShopEase — Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="logo">
+        <i class="fas fa-shopping-bag"></i>
+        ShopEase
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="product.html" class="active"><i class="fas fa-box"></i> Products</a></li>
+          <li>
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i> Cart
+              <span class="cart-badge" id="cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="checkout.html"><i class="fas fa-credit-card"></i> Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container product-page">
+    <a href="index.html" class="back-link">
+      <i class="fas fa-arrow-left"></i> Back to products
+    </a>
+
+    <section class="product-detail-grid">
+      <div class="product-media">
+        <img id="product-image" src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=450&fit=crop" alt="Smart wireless earbuds with charging case" />
+      </div>
+
+      <div class="product-details">
+        <h1 id="product-title">Smart Earbuds</h1>
+        <p class="product-price" id="product-price">₱1,499</p>
+
+        <div class="product-meta">
+          <span class="badge-success"><i class="fas fa-check-circle"></i> In Stock</span>
+          <span class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>4.5 (120 reviews)</span>
+          </span>
+        </div>
+
+        <div class="quantity-selector">
+          <label for="qty">Quantity</label>
+          <div class="qty-controls">
+            <button class="qty-btn" id="qty-minus" aria-label="Decrease quantity">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input id="qty" name="qty" type="number" min="1" value="1" aria-label="Quantity" />
+            <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <button id="add-cart" class="btn primary btn-large add-to-cart" data-id="1" data-name="Smart Earbuds" data-price="1499">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+
+        <div class="product-features">
+          <h3><i class="fas fa-list"></i> Key Features</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Active noise cancellation</li>
+            <li><i class="fas fa-check"></i> 8 hours battery per charge</li>
+            <li><i class="fas fa-check"></i> Wireless charging case included</li>
+            <li><i class="fas fa-check"></i> Touch controls for music and calls</li>
+          </ul>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Product details tabs">
+          <button role="tab" aria-selected="true" aria-controls="desc" id="tab-desc" class="tab">
+            <i class="fas fa-info-circle"></i> Description
+          </button>
+          <button role="tab" aria-selected="false" aria-controls="specs" id="tab-specs" class="tab">
+            <i class="fas fa-cog"></i> Specifications
+          </button>
+          <button role="tab" aria-selected="false" aria-controls="reviews" id="tab-reviews" class="tab">
+            <i class="fas fa-star"></i> Reviews
+          </button>
+        </div>
+
+        <div id="desc" role="tabpanel" aria-labelledby="tab-desc" class="tab-panel">
+          <p>Premium true wireless earbuds with crystal-clear sound and active noise cancellation. Perfect for commuting, working out, or just enjoying your favorite music without distractions. The ergonomic design ensures a comfortable fit for all-day wear.</p>
+          <p>Each earbud delivers up to 8 hours of playtime on a single charge, and the compact charging case provides an additional 24 hours of battery life. Quick charge feature gives you 2 hours of playback with just 15 minutes of charging.</p>
+        </div>
+
+        <div id="specs" role="tabpanel" aria-labelledby="tab-specs" class="tab-panel hidden" hidden>
+          <table class="specs-table">
+            <tr>
+              <th>Connectivity</th>
+              <td>Bluetooth 5.2</td>
+            </tr>
+            <tr>
+              <th>Battery Life</th>
+              <td>8h earbuds + 24h case</td>
+            </tr>
+            <tr>
+              <th>Water Resistance</th>
+              <td>IPX4 splash resistant</td>
+            </tr>
+            <tr>
+              <th>Driver Size</th>
+              <td>10mm dynamic drivers</td>
+            </tr>
+            <tr>
+              <th>Weight</th>
+              <td>5g per earbud</td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="reviews" role="tabpanel" aria-labelledby="tab-reviews" class="tab-panel hidden" hidden>
+          <div class="review">
+            <div class="review-header">
+              <strong>Maria Santos</strong>
+              <span class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+            </div>
+            <p>"Excellent sound quality and the noise cancellation works great! Perfect for my daily commute."</p>
+          </div>
+          <div class="review">
+            <div class="review-header">
+              <strong>Juan Dela Cruz</strong>
+              <span class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </span>
+            </div>
+            <p>"Great value for money. Battery lasts all day and they're very comfortable."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> ShopEase — Built with accessibility in mind.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
